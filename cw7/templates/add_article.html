@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}To do{% endblock %}
+{% block menu %}
+{% endblock %}
+{% block content%}
+<style>
+.form-group {
+    margin-bottom: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    width: 100%;
+  }
+
+  button {
+    margin-top: 1rem;
+  }
+
+
+</style>
+<form method="POST" action="{% url 'article_add' %}">
+{% include 'partial/article_form.html' %}
+</form>
+{% endblock %}
