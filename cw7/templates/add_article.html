@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}To do{% endblock %}
+{% block title %}Add record{% endblock %}
 {% block menu %}
 {% endblock %}
 {% block content%}
@@ -23,6 +23,7 @@
 
 </style>
 <form method="POST" action="{% url 'article_add' %}">
-{% include 'partial/article_form.html' %}
+{% include 'partial/article_form.html'%}
+    <button type="submit">Create Record </button>
 </form>
 {% endblock %}

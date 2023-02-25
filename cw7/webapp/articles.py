@@ -3,6 +3,7 @@ from django.urls import reverse
 from webapp.models import Article
 from webapp.form import ArticleForm
 
+
 def add_article(request):
     if request.method == 'GET':
         form = ArticleForm()
@@ -18,6 +19,7 @@ def add_article(request):
             return redirect(reverse('index'))
         else:
             return render(request, 'add_article.html', context={'form': form})
+
 
 def article_update(request, pk):
     article = get_object_or_404(Article, pk=pk)

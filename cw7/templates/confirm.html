@@ -9,13 +9,13 @@
   margin: 30px;
 }
 
+
 </style>
-    <h1>Are sure?</h1>
-    <h2>Title: {{ article.title }}</h2>
-    <p> Description: {{ article.description }}</p>
-  <form action="{%url 'confirm' article.pk%}" method="post">
-      {% csrf_token %}
-      <p><input type="submit" value="Delete"></p>
-      <p><a href="{% url 'index' %}">Cancel</a></p>
-  </form>
+<h1>Do you realy want to delete?</h1>
+<h2>{{ article.title }}</h2>
+<form action="{%url 'confirm' article.pk%}" method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Yes</button>
+    <a href="{% url 'index' %}" class="btn btn-primary">No</a>
+</form>
 {% endblock %}

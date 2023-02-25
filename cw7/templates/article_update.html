@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}To do{% endblock %}
+{% block title %}Update record{% endblock %}
 {% block menu %}
 {% endblock %}
 {% block content%}
@@ -19,10 +19,10 @@
   button {
     margin-top: 1rem;
   }
-
-
 </style>
+
 <form method="POST" action="{% url 'article_update' article.pk %}">
- {% include 'partial/article_form.html' %}
+    {% include 'partial/article_form.html'%}
+    <button type="submit">Update Record</button>
 </form>
 {% endblock %}
